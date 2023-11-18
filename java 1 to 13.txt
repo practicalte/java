@@ -1,0 +1,342 @@
+1. display first 50 prime numbers
+public class JAVAPrime {
+ public static void main(String[] args) {
+ int i,j, factor;
+ for(i=1;i<=50;i++) 
+ {
+ factor=0;
+ for(j=1;j<=i;j++)
+ {
+ if(i%j==0)
+ factor++;
+ }
+ if(factor==2)
+ System.out.println(i); 
+ }
+ }
+}
+
+2.program in java with class rectangle
+import java.io.*;
+import java.util.*;
+public class Rectangle {
+double width, length, area;
+ String colour;
+ Scanner sc= new Scanner (System.in);
+ Rectangle()
+ {
+System.out.print("Enter the Length: ");
+length = sc.nextDouble();
+System.out.print("Enter the Width: ");
+width= sc.nextDouble();
+System.out.print("Enter the colour: ");
+colour = sc.next();
+area= length*width;
+System.out.println("Area of Rectangle: "+area);
+ }
+public static void main(String[] args) {
+System.out.println("First Rectangle: ");
+ Rectangle r1 =new Rectangle();
+System.out.println("Second Rectangle: ");
+ Rectangle r2 =new Rectangle();
+if(r1.area==r2.area && r1.colour.equals(r2.colour))
+System.out.println("Matching Rectangle: ");
+else
+System.out.println("Not Matching Rectangle: ");}}
+ 
+3.TO find factorial of number
+ import java.util.*;
+public class Exp1Java {
+ public static void main(String[] args) {
+ int fact=1, n;
+Scanner factorial=new Scanner (System.in);
+System.out.println("Enter any Number: ");
+n=factorial.nextInt();
+for(int i=1; i<=n; i++)
+{
+fact = fact*i;
+}
+System.out.println("factorial of "+n+ "is "+fact); 
+ }
+ }
+
+4.implement calculator with simple arithmetic operations
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+    char operator;
+    Double number1, number2, result;
+
+    // create an object of Scanner class
+    Scanner input = new Scanner(System.in);
+
+    // ask users to enter operator
+    System.out.println("Choose an operator: +, -, *, or /");
+    operator = input.next().charAt(0);
+
+    // ask users to enter numbers
+    System.out.println("Enter first number");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter second number");
+    number2 = input.nextDouble();
+
+    switch (operator) {
+
+      // performs addition between numbers
+      case '+':
+        result = number1 + number2;
+        System.out.println(number1 + " + " + number2 + " = " + result);
+        break;
+
+      // performs subtraction between numbers
+      case '-':
+        result = number1 - number2;
+        System.out.println(number1 + " - " + number2 + " = " + result);
+        break;
+
+      // performs multiplication between numbers
+      case '*':
+        result = number1 * number2;
+        System.out.println(number1 + " * " + number2 + " = " + result);
+        break;
+
+      // performs division between numbers
+      case '/':
+        result = number1 / number2;
+        System.out.println(number1 + " / " + number2 + " = " + result);
+        break;
+
+      default:
+        System.out.println("Invalid operator!");
+        break;
+    }
+
+    input.close();
+  }
+}
+
+5.to find sum and average of n numbers
+import java.util.Scanner;
+public class Exp1javasum {
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter the number of values: ");
+ int n = scanner.nextInt();
+ int sum = 0;
+ for (int i = 1; i <= n; i++) {
+ System.out.print("Enter value " + i + ": ");
+ int value = scanner.nextInt();
+ sum += value;
+ }
+ double average = (double) sum / n;
+ System.out.println("Sum: " + sum);
+ System.out.println("Average: " + average);
+ scanner.close();
+ }
+}
+
+6.method overloading
+public class A1 {
+ void add() 
+ {
+ int a=10,b=20;
+ int c=a+b;
+ System.out.println("Sum=" +c);
+ } 
+ void add(int x, int y){
+ int z= x+y;
+ System.out.println("Sum="+z);
+ }
+ public static void main(String[] args) {
+ A1 obj= new A1();
+ obj.add();
+ obj.add(40,50);
+ }
+ }
+
+7.sort list if integers
+import java.util.Arrays;
+public class Expfive {
+ public static void main(String[] args) { 
+int[] random = {33, 4, 12, 56, 89, 99, 13, 66, 55};
+System.out.println("Array before sorting: "+ Arrays.toString(random));
+Arrays.sort(random);
+System.out.println("Array after sorting in ascending order: "
++Arrays.toString(random));
+}
+}
+
+8.constructor overloading
+public class A1 {
+ A1()
+ {
+ System.out.println("Constructor without arguments");
+ }
+ A1(int a){
+ System.out.println("Constructor with arguments");
+ } 
+ public static void main(String[] args) {
+ A1 obj= new A1();
+ A1 obj1= new A1(10);
+ }
+ }
+
+sort list of names
+import java.util.Arrays;
+public class ExpFiveNames {
+public static void main(String[] args) { 
+String[] names = {"John", "Steve", "Shane", "Adam", "Ben"};
+System.out.println("String array before sorting:"+Arrays.toString(names));
+Arrays.sort(names);
+System.out.println("String array after sorting in ascending order:"+Arrays.toString(names));
+}
+}
+
+9.Program to add two matrices
+import java.util.Scanner;
+public class Matrix {
+ public static void main(String[] args) {
+ int a[][]=new int[2][2];
+ int b[][]=new int[2][2];
+ int c[][]=new int[2][2];
+ Scanner r= new Scanner(System.in);
+ System.out.println("Enter First Matrix Data");
+ for(int i=0;i<2;i++) //for rows
+ {
+ 
+ for(int j=0;j<2;j++)//columns
+ {
+ a[i][j]=r.nextInt();
+ 
+ System.out.print(a[i][j]+ " " );
+ }
+ System.out.print("\n");
+ }
+ System.out.println("Enter Second Matrix Data");
+ for(int i=0;i<2;i++) //for rows
+ {
+ 
+ for(int j=0;j<2;j++)//columns
+ {
+ b[i][j]=r.nextInt();
+ 
+ System.out.print(b[i][j]+ " ");
+ }
+ System.out.print("\n");
+ }
+ 
+ System.out.println("Sum of two Matrix");
+ for(int i=0;i<2;i++) //for rows
+ {
+ 
+ for(int j=0;j<2;j++)//columns
+ {
+ c[i][j]=a[i][j]+b[i][j];
+ System.out.print(c[i][j]+ " ");
+ 
+ }
+ System.out.print("\n");
+ }
+ 
+ 
+ }
+ }
+
+10.Inheritance Code
+class player
+{
+void display()
+{
+System.out.println("Players");
+} 
+} 
+class Cricket_player extends player
+{
+ void show()
+ {
+ System.out.println("Cricket Players");
+ }
+ } 
+class Football_player extends player{
+void display(){
+System.out.println("Football Players");
+}
+}
+class Hockey_player extends player{
+ void show(){
+System.out.println("Hockey player");
+}
+ } 
+public class Inherit {
+ public static void main(String[] args) {
+ Cricket_player obj1=new Cricket_player();
+ Football_player obj2=new Football_player();
+ Hockey_player obj3=new Hockey_player();
+ obj1.display();
+ obj1.show();
+ obj2.display();
+ obj3.show();
+ }
+ }
+
+11.implements Interface Code
+interface A
+{
+void Adisplay();
+}
+class AB implements A
+{
+public void Adisplay()
+{
+System.out.println("A display");
+}
+}
+public class InterfaceDemo {
+ public static void main(String[] args) {
+ AB obj=new AB();
+ obj.Adisplay();
+ }
+ }
+
+12.Exception Handling Code
+public class ExceptionDemo {
+ public static void main(String[] args) {
+ int x,y;
+ int a=10,b=5,c=5;
+ try
+ {
+ x=a/(b-c);
+ System.out.println(x);
+ }
+ catch(Exception e)
+ {
+ System.out.println("Exception Handled");
+ System.out.println(e);
+ }
+ y=a/(b+c);
+ System.out.println(y);
+ System.out.println("End of try-catch block");
+ }
+ }
+
+13.Graphics class Code
+import java.awt.*;
+import java.applet.Applet;
+/*
+<applet code="NewApplet" width=300 height=300></applet>
+*/
+public class NewApplet extends Applet {
+ public void paint(Graphics g){
+ g.drawOval(10,10,50,100);
+ g.drawString("Oval",25, 130);
+ g.drawRect(70,70,70,70);
+ g.drawString("Rectangle",80, 160);
+ g.drawLine(70,30,200,30);
+ g.drawString("line",120, 50);
+ g.drawString("it is demo of various graphics objects",40, 200);
+ }
+ }
+
